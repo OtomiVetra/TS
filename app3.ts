@@ -1,9 +1,9 @@
 const COMMENTS_URL = 'https://jsonplaceholder.typicode.com/comments';
 
-type CommentData = {
+interface CommentData {
   id: number;
   email: string;
-};
+}
 
 const getData = async (url: string): Promise<CommentData[]> => {
   const response = await fetch(url);

@@ -1,9 +1,9 @@
-type TotalPriceParams = {
+interface TotalPriceParams {
   price: number;
   discount: number;
   isInstallment: boolean;
   months?: number;
-};
+}
 
 const totalPrice = (params: TotalPriceParams): number => {
   const { price, discount, isInstallment, months } = params;

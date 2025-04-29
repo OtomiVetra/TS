@@ -37,16 +37,16 @@ const posts = [
   },
 ];
 
-type Post = {
+interface Post {
   id: string;
   title: string;
   body: string;
-};
+}
 
-type NormalizedPosts = {
+interface NormalizedPosts {
   byId: { [id: string]: Post };
   allIds: string[];
-};
+}
 
 const normalizeData = (unnormalizedData: Post[]): NormalizedPosts => {
   const byId: { [id: string]: Post } = {};
